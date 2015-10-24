@@ -7,5 +7,5 @@
 	<title>Pointifai</title>
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/animate.min.css">
+	<link rel="stylesheet" href="/css/animate.css">
 </head>
