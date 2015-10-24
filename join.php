@@ -1,5 +1,5 @@
 <?php include('templates/header.php'); ?>
-<body class="mobile-controller">
+<body class="mobile-controller centre">
 	<div class="mobile mobile-name">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
 		<p>Enter your name:</p>
