@@ -15,31 +15,27 @@ curl_setopt_array($curl, array(
 $response = curl_exec($curl);
 if($response == FALSE) echo "Lol!!!";
 else {
+	// Get the tags and their probabilities from clarifai
 	$json = json_decode($response, true);
 	$img_results = $json["results"]["0"]["result"]["tag"];
 	$tags = $img_results["classes"];
 	$probs = $img_results["probs"];
+	// Remove the "nobody" tag, as it's irrelevant
+	$nobody = array_search("nobody", $tags);
+	if($nobody !== FALSE){
+		unset($tags[$nobody]);
+		unset($probs[$nobody]);
+	}
 	print_tags($tags, $probs);
-	$modified = remove_min($tags, $probs);
-	$tags = $modified[0];
-	$probs = $modified[1];
-	$min_val = $modified[2];
-	print_tags($tags, $probs);
-}
-
-function remove_min($tags, $probs){
-	$min_val = INF;
-	$min_index = "0";
-	foreach($tags as $key => $val){
-		$probs[$key] = floatval($probs[$key]);
-		if($probs[$key] < $min_val) {
-			$min_val = $probs[$key];
-			$min_index = $key;
+	// Ensure that there are no more than 10 items in the arrays
+	$count = count($tags);
+	if($count > 10){
+		for($x = 0; $x < $count-10; $x++){
+			unset($tags[$count-1-$x]);
+			unset($probs[$count-1-$x]);
 		}
 	}
-	unset($tags[$min_index]);
-	unset($probs[$min_index]);
-	return array ($tags, $probs, $min_val);
+	print_tags($tags, $probs);
 }
 
 function print_tags($tags, $probs){
