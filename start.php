@@ -1,5 +1,5 @@
 <?php include('templates/header.php'); ?>
-<body>
+<body style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;">
 	<div class="desktop centre">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
 		<h2>Waiting for players<span class="infinite flash">...</span></h2>
