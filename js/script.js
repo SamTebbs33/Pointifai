@@ -22,11 +22,11 @@ $(document).ready(function () {
 		$('.mobile-name a').click(function (e) {
 			// prevent the button from working
 			e.preventDefault();
+			has_registered = true;
 			if (!has_registered) {
 				$.post('/register.php', {
 					'name': $('.mobile-name > input').val()
 				}, function () {
-					has_registered = true;
 					// output swag
 					console.log('the doge has registered with the meme, very swag');
 					// store the name
