@@ -13,4 +13,4 @@
 		<a class="button">Start Game</a>
 	</div>
 </body>
-</html>
+<?php include('templates/footer.php'); ?>
