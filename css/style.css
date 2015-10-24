@@ -102,6 +102,11 @@ ul {
   background-color: rgba(0, 0, 0, 0);
 }
 
+.button button-white-stroke:hover {
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0);
+}
+
 .button.button-blue {
   border: solid 3px #1a8bb3;
   background-color: #1a8bb3;
