@@ -12,7 +12,7 @@ if($round <= 5){
 	$url = $round[1];
 	$tags = $round[2];
 	$pps = mysqli_fetch_all(mysqli_query($link, "SELECT * FROM participants"));
-	var_dump($pps);
+	echo $pps;
 }
 
 ?>
