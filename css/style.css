@@ -73,3 +73,48 @@ header.logo {
 ul {
   margin-left: 1em;
 }
+
+.desktop .question-view {
+  width: 100%;
+}
+
+.desktop .question-view td {
+  width: 50%;
+}
+
+.button.button-white-stroke {
+  border: solid 3px white;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.button.button-blue {
+  border: solid 3px #1a8bb3;
+  background-color: #1a8bb3;
+}
+
+.button.button-blue:hover {
+  border: solid 3px #10455e;
+  background-color: #10455e;
+}
+
+.desktop table.leaderboard {
+  width: 100%;
+}
+
+.desktop table.leaderboard tr td {
+  width: 60%;
+  text-align: center;
+}
+
+.desktop table.leaderboard tr td:nth-child(odd) {
+  width: 20%;
+  text-align: center;
+}
+
+.desktop table.leaderboard tr:nth-child(even) td {
+  background-color: #def4ff;
+}
+
+img.question-image {
+  max-width: 100%;
+}
