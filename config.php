@@ -1,5 +1,5 @@
 <?php
-require_once 'secure/auth.php';
+require_once 'secure/keys.php';
 $databaseUsername = $key_db_username;
 $databasePassword = $key_db_password;
 $databaseHostName = "localhost";
