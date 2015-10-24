@@ -24,7 +24,7 @@ if ($game_state == "1" || isset($_GET['state'])) {
 	$img = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM images WHERE id = $round"));
 	$url = $img[1];
 ?>
-<body class="host<?php if(strlen($game_state) == 1) { echo " timer"; }?>" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
+<body class="host<?php if(strlen($game_state) == 1) { echo " timer"; } ?>" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
 	<div class="desktop centre">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
 		<?php if(strlen($game_state) == 1) { ?>
