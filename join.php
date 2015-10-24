@@ -1,4 +1,6 @@
-<?php include('templates/header.php'); ?>
+<?php include('templates/header.php'); 
+if (mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE field = 'state'"))[2] == "0") {
+?>
 <body class="mobile-controller centre">
 	<div class="mobile mobile-name">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
@@ -22,4 +24,15 @@
 		<p>100</p>
 	</div>
 </body>
-<?php include('templates/footer.php'); ?>
+<?php 
+} else {
+	?>
+<body class="mobile-controller centre">
+	<div class="">
+		<header class="logo">Pointif<span class="text-blue">ai</span></header>
+		<p>A game is already in progress</p>
+	</div>
+</body>
+	<?php
+}
+include('templates/footer.php'); ?>
