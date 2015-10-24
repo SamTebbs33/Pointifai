@@ -93,6 +93,7 @@ header.logo {
 
 ul {
   margin-left: 1em;
+  list-style-type: none;
 }
 
 .desktop .question-view {
