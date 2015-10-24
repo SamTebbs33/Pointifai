@@ -2,3 +2,5 @@ secret.txt
 *.swp
 
 templates/keys.php
+
+secure/keys.php
