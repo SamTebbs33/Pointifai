@@ -5,8 +5,8 @@
 		audio.play();
 	</script>
 	<div class="welcome">
-		<h1 class="logo animated infinite pulse">Samuel Tebbs</h1>
-		<h2>100 pts</h2>
+		<h1 class="logo animated infinite pulse winner_name">Samuel Tebbs</h1>
+		<h2 class="winner_points">100 pts</h2>
 		<a href="index.php" class="button button-white-stroke button-cta">Back to menu</a>
 	</div>
 </body>

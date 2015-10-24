@@ -1,6 +1,6 @@
 <?php include('templates/header.php'); ?>
 <body>
-	<div class="desktop">
+	<div class="desktop centre">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
 		<h2>Waiting for players...</h2>
 		<h3>Current players:</h3>
