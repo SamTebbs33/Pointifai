@@ -28,13 +28,8 @@ $(document).ready(function () {
 				name = $('.mobile-name > input').val();
 
 				$('.mobile-name').hide();
-				$('.mobile-message .message').html('Waiting...');
+				$('.mobile-message .message').html('Waiting for the game to start...');
 				$('.mobile-message').show();
-
-				setTimeout(function () {
-					$('.mobile-message').hide();
-					$('.mobile-enter-tag').show();
-				}, 2000);
 			});
 		});
 	}
