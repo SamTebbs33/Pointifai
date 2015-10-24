@@ -3,7 +3,7 @@
 $secret = parse_ini_file("secret.txt");
 
 $curl = curl_init();
-$img_url = "http://www.lucozadeenergy.com/product_images/_orig/132.jpg";
+$img_url = "http://zoarchurch.co.uk/content/pages/uploaded_images/91.png";
 echo "<img src=\"$img_url\" width=\"100%\">";
 curl_setopt_array($curl, array(
 	CURLOPT_URL => "https://api.clarifai.com/v1/tag/",
@@ -26,20 +26,23 @@ else {
 		unset($tags[$nobody]);
 		unset($probs[$nobody]);
 	}
-	print_tags($tags, $probs);
 	// Ensure that there are no more than 10 items in the arrays
 	$count = count($tags);
 	$min_val = "0";
-	if($count > 10){
-		for($x = 0; $x < $count-10; $x++){
+	$max_tags = 10;
+	if($count > $max_tags){
+		for($x = 0; $x < $count-$max_tags; $x++){
 			$idx = $count-$x;
 			unset($tags[$idx]);
 			$min_val = $probs[$idx];
 			unset($probs[$idx]);
 		}
 	}
+	// Scale each probaility between 1 and 100 after subtracting the min val
 	foreach($probs as $key => $val){
-		$probs[$key] = (floatval($val) - floatval($min_val)) * 100;
+		$probs[$key] = intval((floatval($val) - floatval($min_val)) * 1000);
+		$x = $probs[$key] % 5;
+		$probs[$key] -= $x;
 	}
 	print_tags($tags, $probs);
 
