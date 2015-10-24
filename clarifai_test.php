@@ -29,13 +29,20 @@ else {
 	print_tags($tags, $probs);
 	// Ensure that there are no more than 10 items in the arrays
 	$count = count($tags);
+	$min_val = "0";
 	if($count > 10){
 		for($x = 0; $x < $count-10; $x++){
-			unset($tags[$count-1-$x]);
-			unset($probs[$count-1-$x]);
+			$idx = $count-$x;
+			unset($tags[$idx]);
+			$min_val = $probs[$idx];
+			unset($probs[$idx]);
 		}
 	}
+	foreach($probs as $key => $val){
+		$probs[$key] = (floatval($val) - floatval($min_val)) * 100;
+	}
 	print_tags($tags, $probs);
+
 }
 
 function print_tags($tags, $probs){
