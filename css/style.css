@@ -96,6 +96,22 @@ ul {
   list-style-type: none;
 }
 
+li {
+  background-color: black;
+  display: inline-block;
+  min-width: 155px;
+  padding: 0.5em 1em;
+  border-radius: 0.6em;
+  color: white;
+  text-decoration: none;
+  margin: 0.5rem;
+  text-align: center;
+
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(20, 20, 20, 0.2);
+  -moz-box-shadow:    1px 1px 2px 0px rgba(20, 20, 20, 0.2);
+  box-shadow:         1px 1px 2px 0px rgba(20, 20, 20, 0.2);
+}
+
 .desktop .question-view {
   width: 100%;
 }
