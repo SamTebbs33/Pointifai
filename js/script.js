@@ -1,6 +1,7 @@
 $(document).ready(function () {
 	var name = '';
 	console.log('yolo swag');
+	var has_registered = false;
 
 	// check to see if the page is a controller
 	if ($('body').hasClass('mobile-controller')) {
@@ -21,18 +22,21 @@ $(document).ready(function () {
 		$('.mobile-name a').click(function (e) {
 			// prevent the button from working
 			e.preventDefault();
-			$.post('/register.php', {
-				'name': $('.mobile-name > input').val()
-			}, function () {
-				// output swag
-				console.log('the doge has registered with the meme, very swag');
-				// store the name
-				name = $('.mobile-name > input').val();
+			if (!has_registered) {
+				$.post('/register.php', {
+					'name': $('.mobile-name > input').val()
+				}, function () {
+					has_registered = true;
+					// output swag
+					console.log('the doge has registered with the meme, very swag');
+					// store the name
+					name = $('.mobile-name > input').val();
 
-				$('.mobile-name').hide();
-				$('.mobile-message .message').html('Waiting for the game to start...');
-				$('.mobile-message').show();
-			});
+					$('.mobile-name').hide();
+					$('.mobile-message .message').html('Waiting for the game to start...');
+					$('.mobile-message').show();
+				});
+			}
 		});
 	}
 
