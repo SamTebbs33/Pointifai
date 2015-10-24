@@ -23,7 +23,7 @@ $(document).ready(function () {
 				'name': $('.mobile-name > input').val()
 			}, function () {
 				// output swag
-				console.log('very swag');
+				console.log('the doge has registered with the meme, very swag');
 				// store the name
 				name = $('.mobile-name > input').val();
 
@@ -39,14 +39,14 @@ $(document).ready(function () {
 		});
 	}
 
-	if ($('body').hasClass('')) {
+	if ($('body').hasClass('host')) {
 		var pusher = new Pusher('c834feb77fbe7f552f26', {
 	      encrypted: true
 	    });
 	    var channel = pusher.subscribe('desktop-channel');
 	    console.log('the doge has connected to the meme');
-	    channel.bind('desktop-update', function(data) {
-	      alert(data.message);
+	    channel.bind('new-registration', function(data) {
+	    	$('ul.player-list').append('<li>' + data + '</li>');
 	    });
 	}
 });
