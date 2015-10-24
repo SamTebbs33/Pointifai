@@ -81,7 +81,6 @@ a.button {
 input {
   background-color: white;
   display: inline-block;
-  min-width: 155px;
   padding: 0.5em 1em;
   border-radius: 0.4em;
   color: black;
