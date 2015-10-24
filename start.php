@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Pointifai</title>
-	<link rel="stylesheet" href="/css/style.css">
-</head>
+<?php include('templates/header.php'); ?>
 <body>
 	<div class="desktop">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>

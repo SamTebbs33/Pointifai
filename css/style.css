@@ -53,6 +53,10 @@ a.button:hover {
   background-color: #404040;
 }
 
+a.button.button-cta {
+  min-width: 200px;
+}
+
 .logo {
   /*-webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
@@ -117,4 +121,16 @@ ul {
 
 img.question-image {
   max-width: 100%;
+}
+
+.mobile p {
+  font-size: 2rem;
+}
+
+.mobile input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px black solid;
+  font-size: 2rem;
 }
