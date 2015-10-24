@@ -5,7 +5,7 @@
 		<p>Enter your name:</p>
 		<input type="text">
 		<br>
-		<a class="button">Go</a>
+		<a class="button button-blue">Go</a>
 	</div>
 	<div class="mobile mobile-message">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
