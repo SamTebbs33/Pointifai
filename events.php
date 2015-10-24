@@ -17,6 +17,10 @@ function push_game_end($pusher){
 	$pusher->trigger("client-channel", "game-end", "");
 }
 
+function push_end_q($pusher){
+	$pusher->trigger("client-channel", "end-q", "");
+}
+
 // Host
 function push_new_registration($pusher, $user){
 	$pusher->trigger("host-channel", "new-registration", $user);
