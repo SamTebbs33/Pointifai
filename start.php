@@ -22,7 +22,7 @@ if ($game_state == "1" || isset($_GET['state'])) {
 <body class="host" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
 	<div class="desktop centre">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
-		<h2>Waiting for players<span class="infinite flash">...</span></h2>
+		<h2>Waiting for playas<span class="infinite flash">...</span></h2>
 		<h3>Current players:</h3>
 		<ul class="player-list">
 		</ul>
