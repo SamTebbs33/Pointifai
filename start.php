@@ -17,7 +17,7 @@ if ($game_state == "0" && !isset($_GET['state'])) { ?>
 }
 
 if ($game_state == "1" || isset($_GET['state'])) {
-
+	push_new_q($pusher);
 ?>
 <body class="host" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
 	<div class="desktop centre">
