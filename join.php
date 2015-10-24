@@ -15,7 +15,7 @@
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
 		<p class="score">100</p>
 		<p class="rank">2nd</p>
-		<p><input type="text" placeholder="Enter tag..." style="width: 100%;"></p>
+		<p><input type="text" class="textfield" placeholder="Enter tag..." style="width: 100%;"></p>
 	</div>
 	<div class="mobile mobile-countdown">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
