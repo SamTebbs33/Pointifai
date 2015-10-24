@@ -4,7 +4,7 @@ $databaseUsername = $key_db_username;
 $databasePassword = $key_db_password;
 $databaseHostName = "localhost";
 $databasePort = "3600";
-$databaseName = "pointifai";
+$databaseName = "pointifai-production";
 //Open MySQL connection to server
 $link = mysqli_connect($databaseHostName, $databaseUsername, $databasePassword, $databaseName, $databasePort);
 //Check if connection worked
