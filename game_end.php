@@ -4,7 +4,7 @@
 		var audio = new Audio('audio/end_theme.wav');
 		audio.play();
 	</script>
-	<div class="welcome animated infinite pulse zoomOutDown">
+	<div class="welcome animated infinite pulse">
 		<h1 class="logo">Samuel Tebbs</h1>
 		<h2>100 pts</h2>
 	</div>
