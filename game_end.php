@@ -5,7 +5,7 @@
 		audio.play();
 	</script>
 	<div class="welcome">
-		<h1 class="logo">Samuel Tebbs</h1>
+		<h1 class="logo animated infinite pulse">Samuel Tebbs</h1>
 		<h2>100 pts</h2>
 	</div>
 </body>
