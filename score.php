@@ -8,7 +8,7 @@ function get_leaderboard(){
 	while($row = $result->fetch_assoc()){
 		$leaderboard[$row[1]] = $row[2];	
 	}
-	return json_encode($leaderboard);
+	return $leaderboard;
 }
 
 ?>
