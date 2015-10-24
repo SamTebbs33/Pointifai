@@ -30,10 +30,6 @@ h3 {
 
 h1, h2, h3 {
   margin: 1rem 0;
-
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
 }
 
 div.welcome {
@@ -58,10 +54,6 @@ a.button {
   color: white;
   text-decoration: none;
   margin: 0.5rem;
-
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
 }
 
 a.button:hover {
