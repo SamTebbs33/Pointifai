@@ -50,6 +50,7 @@ div.endscreen {
 a.button {
   background-color: black;
   display: inline-block;
+  min-width: 155px;
   padding: 0.5em 1em;
   border-radius: 1.2em;
   color: white;
