@@ -3,10 +3,10 @@
 $round = get_round();
 $img = get_img($round);
 $url = $img[0];
-$tags_and_probs = explode($img[1], ",");
+$tags_and_probs = explode(",", $img[1]);
 $tags = [];
 foreach($tags_and_probs as $key => $val){
-	$exploded = explode($val, ";");
+	$exploded = explode(";", $val);
 	$tags[$key] = $exploded[0];
 	$probs[$key] = $exploded[1];
 }
