@@ -16,6 +16,13 @@ $(document).ready(function () {
 	     	$('.mobile-enter-tag').show();
 	    });
 
+	    channel.bind('end-q', function(data) {
+	    	console.log('stop. hammer time');
+	     	$('.mobile').hide();
+			$('.mobile-message .message').html('Waiting for the next question...');
+	     	$('.mobile-message').show();
+	    });
+
 		// show the form to enter the name
 		$('.mobile-name').show();
 		// setup the go button

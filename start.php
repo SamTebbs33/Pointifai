@@ -2,7 +2,15 @@
 
 $game_state = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE field = 'state'"))[2];
 
-if ($game_state == "0" && !isset($_GET['state'])) { ?>
+// Initial registration page
+if (isset($_GET['state']) {
+	if ($game_state + 1 == $_GET['state']) {
+		$blah = mysqli_query($link, "UPDATE settings SET val='" . $new_val . "' WHERE field = 'state'");
+		$game_state++;
+	}
+}
+
+if ($game_state == "0")) { ?>
 <body class="host" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
 	<div class="desktop centre">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
@@ -16,46 +24,55 @@ if ($game_state == "0" && !isset($_GET['state'])) { ?>
 <?php 
 }
 
-if ($game_state == "1" || isset($_GET['state'])) {
+// Question pages
+else if (($game_state > 0 && ($game_state % 2 != 0) && $game_state < 9)) {
 	push_new_q($pusher);
-	$blah = mysqli_query($link, "UPDATE settings SET val='1' WHERE field = 'state'");
-	$round = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE field = 'round'"));
-	$round = substr($round[2], 0, 1);
+	// $new_val = $game_state + 1;
+	// $state = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE field = 'round'"));
+	// $state = substr($round[2], 0, 1);
 	$img = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM images WHERE id = $round"));
 	$url = $img[1];
 ?>
 <body class="host<?php if(strlen($game_state) == 1) { echo " timer"; } ?>" data-state="<?php echo $game_state; ?>" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
 	<div class="desktop centre">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
-		<?php if(strlen($game_state) == 1) { ?>
-			<div class="timer"><span class="seconds"></span>s remaining...</div>
-			<img src="<?php echo $url ?>" alt="Question Image" class="question-image">
-		<?php } else { ?>
-			<table class="leaderboard">
-				<tr>
-					<td>100</td>
-					<td>clarifai-bob</td>
-					<td>...</td>
-				</tr>
-				<tr>
-					<td>75</td>
-					<td>clarifai-dave</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>50</td>
-					<td>clarifai-sarah</td>
-					<td>...</td>
-				</tr>
-				<tr>
-					<td>25</td>
-					<td>clarifai-user</td>
-					<td>...</td>
-				</tr>
-			</table>
-		<?php } ?>
+		<div class="timer"><span class="seconds"></span>s remaining...</div>
+		<img src="<?php echo $url ?>" alt="Question Image" class="question-image">
 	</div>
 </body>
 <?php
+} 
+// Leaderboard
+else if ($game_state > 0 && ($game_state % 2 == 0) && $game_state < 9) {
+	push_end_q($pusher);
+	?>
+		<table class="leaderboard">
+			<tr>
+				<td>100</td>
+				<td>clarifai-bob</td>
+				<td>...</td>
+			</tr>
+			<tr>
+				<td>75</td>
+				<td>clarifai-dave</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>50</td>
+				<td>clarifai-sarah</td>
+				<td>...</td>
+			</tr>
+			<tr>
+				<td>25</td>
+				<td>clarifai-user</td>
+				<td>...</td>
+			</tr>
+		</table>
+	<?php
+}
+else if ($game_state > 8) {
+	?>
+WINNER!!!!!!
+	<?php
 }
 include('templates/footer.php'); ?>
