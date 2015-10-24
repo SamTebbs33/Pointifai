@@ -14,6 +14,15 @@ $(document).ready(function () {
 	    	console.log('#rekt');
 	     	$('.mobile').hide();
 	     	$('.mobile-enter-tag').show();
+	     	$('.timer .seconds').text('20');
+	     	var secs = 20;
+	     	var timer = setInterval(function () {
+	     		secs--;
+	     		$('.timer .seconds').text(secs);
+	     		if (secs < 1) {
+	     			clearInterval(timer);
+	     		}
+	     	}, 1000);
 	    });
 
 		// show the form to enter the name

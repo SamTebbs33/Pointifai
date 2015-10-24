@@ -28,6 +28,7 @@ if ($game_state == "1" || isset($_GET['state'])) {
 	<div class="desktop centre">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
 		<?php if(strlen($game_state) == 1) { ?>
+			<div class="timer"><span class="seconds"></span>s remaining...</div>
 			<img src="<?php echo $url ?>" alt="Question Image" class="question-image">
 		<?php } else { ?>
 			<table class="leaderboard">
