@@ -4,8 +4,8 @@
 		var audio = new Audio('audio/end_theme.wav');
 		audio.play();
 	</script>
-	<div class="welcome animated infinite pulse">
-		<h1 class="logo">Samuel Tebbs</h1>
+	<div class="welcome">
+		<h1 class="logo animated infinite pulse">Samuel Tebbs</h1>
 		<h2>100 pts</h2>
 		<a href="" class="button button-white-stroke button-cta">Back to menu</a>
 	</div>
