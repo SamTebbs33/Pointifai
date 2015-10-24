@@ -11,9 +11,8 @@ if($round <= 5){
 	$round = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM images WHERE id = '$round'"));
 	$url = $round[1];
 	$tags = $round[2];
-	echo "making query<br>";
 	$pps = mysqli_fetch_all(mysqli_query($link, "SELECT * FROM participants"));
-	echo $pps;
+	var_dump($pps);
 }
 
 ?>
