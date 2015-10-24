@@ -1,4 +1,5 @@
 <?php
+require __DIR__ . '/vendor/autoload.php';
 require_once 'secure/keys.php';
 $databaseUsername = $key_db_username;
 $databasePassword = $key_db_password;
