@@ -22,7 +22,7 @@ if ($game_state == "1" || isset($_GET['state'])) {
 	$round = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE field = 'round'"));
 	$round = substr($round[2], 0, 1);
 	$img = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM images WHERE id = $round"));
-	$url = $img[0];
+	$url = $img[1];
 ?>
 <body class="host" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
 	<div class="desktop centre">
