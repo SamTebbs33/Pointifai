@@ -18,6 +18,10 @@ body {
 
 h1 {
   font-size: 3em;
+
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(20, 20, 20, 0.2);
+  -moz-box-shadow:    1px 1px 2px 0px rgba(20, 20, 20, 0.2);
+  box-shadow:         1px 1px 2px 0px rgba(20, 20, 20, 0.2);
 }
 
 h2 {
@@ -31,10 +35,6 @@ h3 {
 h1, h2, h3 {
   margin: 1rem 0;
   font-weight: bold;
-
-  -webkit-box-shadow: 1px 1px 2px 0px rgba(20, 20, 20, 0.2);
-  -moz-box-shadow:    1px 1px 2px 0px rgba(20, 20, 20, 0.2);
-  box-shadow:         1px 1px 2px 0px rgba(20, 20, 20, 0.2);
 }
 
 div.centre {
