@@ -57,6 +57,8 @@ $(document).ready(function () {
 	     		$('.timer .seconds').text(secs);
 	     		if (secs < 1) {
 	     			clearInterval(timer);
+	     			int game_state = $('body').data('state');
+	     			window.location = "/start.php?state=" + game_state;
 	     		}
 	     	}, 1000);
 	    }

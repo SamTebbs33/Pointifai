@@ -3,7 +3,7 @@
 $game_state = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE field = 'state'"))[2];
 
 if ($game_state == "0" && !isset($_GET['state'])) { ?>
-<body class="host" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
+<body class="host" data-state="<?php echo $game_state; ?>" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
 	<div class="desktop centre">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
 		<h2>Waiting for players<span class="infinite flash">...</span></h2>
