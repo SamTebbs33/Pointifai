@@ -88,6 +88,7 @@ input {
   margin: 0.5rem;
   text-align: center;
 
+
   border: solid 3px #eeeeee;
 
   -webkit-box-shadow: 1px 1px 2px 0px rgba(20, 20, 20, 0.2);
@@ -196,7 +197,7 @@ img.question-image {
   appearance: none;
   border: 1px black solid;
   font-size: 2rem;
-  width: 80%;
+  width: 90%;
 }
 
 .mobile-controller > div.mobile {
