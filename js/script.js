@@ -10,8 +10,9 @@ $(document).ready(function () {
 	    var channel = pusher.subscribe('contoller-channel');
 	    console.log('the doge has connected to the meme');
 	    channel.bind('new-q', function(data) {
-	      $('.mobile').hide();
-	      $('.mobile-enter-tag').show();
+	    	console.log('#rekt');
+	     	$('.mobile').hide();
+	     	$('.mobile-enter-tag').show();
 	    });
 
 		// show the form to enter the name
