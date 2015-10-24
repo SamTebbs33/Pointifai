@@ -60,10 +60,6 @@ a.button {
   box-shadow:         1px 1px 2px 0px rgba(20, 20, 20, 0.2);
 }
 
-a.button:hover {
-  background-color: #404040;
-}
-
 a.button.button-cta {
   min-width: 200px;
 }
@@ -110,11 +106,6 @@ ul {
 .button.button-blue {
   border: solid 3px #1a8bb3;
   background-color: #1a8bb3;
-}
-
-.button.button-blue:hover {
-  border: solid 3px #10455e;
-  background-color: #10455e;
 }
 
 .desktop table.leaderboard {
