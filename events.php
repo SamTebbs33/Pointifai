@@ -1,6 +1,6 @@
 <?php
 
-require_once "Pusher.php";
+require_once "vendor/pusher/pusher-php-server/lib/Pusher.php";
 
 $pusher = new Pusher($key_pusher_id, $key_pusher_secret, $key_pusher_app_id);
 
