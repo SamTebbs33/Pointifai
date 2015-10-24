@@ -1,7 +1,8 @@
 <?php include('templates/header.php');
 
-$round = get_round();
-$img = get_img($round);
+$round = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE field = 'round'"));
+$round = $round[2];
+$img = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM images WHERE id = $round"));
 $url = $img[0];
 $tags_and_probs = explode(",", $img[1]);
 $tags = [];
