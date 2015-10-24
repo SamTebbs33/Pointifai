@@ -96,6 +96,10 @@ ul {
   list-style-type: none;
 }
 
+ul.player-list{
+  width: 65%;
+}
+
 li {
   background-color: white;
   display: inline-block;
@@ -106,7 +110,6 @@ li {
   text-decoration: none;
   margin: 0.5rem;
   text-align: center;
-  clear: both;
 
   -webkit-box-shadow: 1px 1px 2px 0px rgba(20, 20, 20, 0.2);
   -moz-box-shadow:    1px 1px 2px 0px rgba(20, 20, 20, 0.2);
