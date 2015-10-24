@@ -11,3 +11,5 @@ $link = mysqli_connect($databaseHostName, $databaseUsername, $databasePassword, 
 if (mysqli_connect_errno()) {
 	die('Database connection failed');
 }
+
+require_once "events.php";

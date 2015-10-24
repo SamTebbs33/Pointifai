@@ -43,7 +43,7 @@ $(document).ready(function () {
 		var pusher = new Pusher('c834feb77fbe7f552f26', {
 	      encrypted: true
 	    });
-	    var channel = pusher.subscribe('desktop-channel');
+	    var channel = pusher.subscribe('host-channel');
 	    console.log('the doge has connected to the meme');
 	    channel.bind('new-registration', function(data) {
 	    	$('ul.player-list').append('<li>' + data + '</li>');
