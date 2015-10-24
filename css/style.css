@@ -196,6 +196,7 @@ img.question-image {
   appearance: none;
   border: 1px black solid;
   font-size: 2rem;
+  width: 80%;
 }
 
 .mobile-controller > div.mobile {
