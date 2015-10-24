@@ -22,8 +22,8 @@ $(document).ready(function () {
 		$('.mobile-name a').click(function (e) {
 			// prevent the button from working
 			e.preventDefault();
-			has_registered = true;
 			if (!has_registered) {
+				has_registered = true;
 				$.post('/register.php', {
 					'name': $('.mobile-name > input').val()
 				}, function () {
