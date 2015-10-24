@@ -7,6 +7,7 @@
 	<div class="welcome animated infinite pulse">
 		<h1 class="logo">Samuel Tebbs</h1>
 		<h2>100 pts</h2>
+		<a href="" class="button button-white-stroke button-cta">Back to menu</a>
 	</div>
 </body>
 <?php include('templates/footer.php'); ?>
