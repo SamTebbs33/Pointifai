@@ -1,10 +1,22 @@
-<?php include('templates/header.php'); ?>
+<?php include('templates/header.php');
+
+$round = get_round();
+$img = get_img($round);
+$url = $img[0];
+$tags_and_probs = explode($img[1], ",");
+$tags = [];
+foreach($tags_and_probs as $key => $val){
+	$exploded = explode($val, ";");
+	$tags[$key] = $exploded[0];
+	$probs[$key] = $exploded[1];
+}
+?>
 <body>
 	<div class="desktop">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
 		<table class="question-view">
 			<tr>
-				<td><img src="/img/stars.jpeg" alt="Question Image" class="question-image"></td>
+			<td><img src="<?php echo $url ?>" alt="Question Image" class="question-image"></td>
 				<td>
 					<table class="leaderboard">
 						<tr>
