@@ -7,7 +7,7 @@ $(document).ready(function () {
 	    var pusher = new Pusher('c834feb77fbe7f552f26', {
 	      encrypted: true
 	    });
-	    var channel = pusher.subscribe('contoller-channel');
+	    var channel = pusher.subscribe('client-channel');
 	    console.log('the doge has connected to the meme');
 	    channel.bind('new-q', function(data) {
 	    	console.log('#rekt');
