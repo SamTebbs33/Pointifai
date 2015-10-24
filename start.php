@@ -18,7 +18,6 @@ if ($game_state == "0" && !isset($_GET['state'])) { ?>
 
 if ($game_state == "1" || isset($_GET['state'])) {
 	push_new_q($pusher);
-	error_log("something may be happening here");
 	$blah = mysqli_query($link, "UPDATE settings SET val='1' WHERE field = 'state'");
 ?>
 <body class="host" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
