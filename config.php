@@ -9,5 +9,5 @@ $databaseName = "pointifai-production";
 $link = mysqli_connect($databaseHostName, $databaseUsername, $databasePassword, $databaseName, $databasePort);
 //Check if connection worked
 if (mysqli_connect_errno()) {
-	die('Database connection failed');
+	die('Database connection failed -> ' . $link->connect_error);
 }
