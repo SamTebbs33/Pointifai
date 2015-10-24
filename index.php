@@ -7,4 +7,4 @@
 		<a href="/join.php" class="button button-blue button-cta">Join a game</a>
 	</div>
 </body>
-</html>
+<?php include('templates/footer.php'); ?>

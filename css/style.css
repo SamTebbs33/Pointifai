@@ -54,7 +54,11 @@ a.button {
   background-color: black;
   display: inline-block;
   padding: 0.5em 1em;
+<<<<<<< HEAD
   border-radius: 1.2em;
+=======
+  border-radius: 100em;
+>>>>>>> origin/master
   color: white;
   text-decoration: none;
   margin: 0.5rem;
@@ -148,4 +152,24 @@ img.question-image {
   appearance: none;
   border: 1px black solid;
   font-size: 2rem;
+}
+
+.mobile-controller > div.mobile {
+  display: none;
+}
+
+.mobile-enter-tag input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+p.score {
+    border-bottom: 1px dashed black;
+    margin-top: 1em;
+}
+p.score, p.rank {
+    text-align: center;
+    font-size: 3em;
+    display: block;
 }
