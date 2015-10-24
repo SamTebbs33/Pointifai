@@ -1,7 +1,7 @@
 <?php include('templates/header.php'); ?>
 <body style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;">
 	<script>
-		var audio = new Audio('audio/end_theme.mp3');
+		var audio = new Audio('audio/end_theme.wav');
 		audio.play();
 	</script>
 	<div class="welcome">
