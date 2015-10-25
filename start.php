@@ -5,7 +5,7 @@ $game_state = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE
 // Initial registration page
 if (isset($_GET['state'])) {
 	if ($game_state + 1 == $_GET['state']) {
-		$blah = mysqli_query($link, "UPDATE settings SET val='" . $new_val . "' WHERE field = 'state'");
+		$blah = mysqli_query($link, "UPDATE settings SET val='" . mysqli_escape_string($link, $_GET['state']) . "' WHERE field = 'state'");
 		$game_state++;
 	}
 }
