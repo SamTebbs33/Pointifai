@@ -113,20 +113,6 @@ a.button.button-cta {
   -webkit-text-stroke-color: rgba(0, 0, 0, 0);*/
 }
 
-.credits{
-  width: 100%;
-  padding: 20px;
-  margin: none;
-  background-color: rgba(0, 0, 0, 125);
-  color: #ffffff;
-  vertical-align: bottom;
-  text-align: center;
-}
-
-.credits-text{
-
-}
-
 header.logo {
   font-size: 1.2rem;
 }
