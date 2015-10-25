@@ -72,7 +72,7 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 						<?php
 					} ?>
 				</table>
-				<a href="/start.php?state=<?php echo $game_state + 1; ?>" class="button button-cta button-blue">Next question</a>
+				<a href="/start.php?state=<?php echo $game_state + 1; ?>" class="button button-cta button-blue"><?php if ($game_state < 8) { ?>Next question<?php } else { ?>Continue<?php } ?></a>
 			</div>
 		</body>
 		<?php
