@@ -34,7 +34,7 @@ h1, h2, h3 {
 }
 
 canvas{
-  
+
 }
 
 div.centre {
@@ -209,9 +209,6 @@ img.question-image {
 }
 
 .mobile-enter-tag input {
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 p.score {
