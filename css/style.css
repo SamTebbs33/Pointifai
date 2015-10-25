@@ -113,18 +113,19 @@ a.button.button-cta {
   -webkit-text-stroke-color: rgba(0, 0, 0, 0);*/
 }
 
-footer{
-  clear: both;
-  margin-top: -80px; /* negative value of footer height */
-  height: 80px;
-  width:100%;
-  position: relative;
+.credits{
+  width: 100%;
+  padding: 10px;
   background-color: rgba(0, 0, 0, 125);
+  color: #ffffff;
+  clear: both;
+  vertical-align: bottom;
+  margin-bottom: 10%;
+  text-align: center;
 }
 
-.footer-text{
-  text-align: center;
-  vertical-align: middle;
+.credits-text{
+
 }
 
 header.logo {
