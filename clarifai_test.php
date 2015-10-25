@@ -5,6 +5,7 @@ require_once "config.php";
 function get_tags_and_probs($img_url){
 	
 	$curl = curl_init();
+	echo "token: " . $key_clarifai_token . "<br>";
 	curl_setopt_array($curl, array(
 		CURLOPT_URL => "https://api.clarifai.com/v1/tag/",
 		CURLOPT_RETURNTRANSFER => TRUE,
