@@ -75,14 +75,16 @@ function get_tags_and_probs_strs($img_url){
 
 function add_img_to_db($img_url){
 	$tags_and_probs = get_tags_and_probs_strs($img_url);
-	$res = mysqli_query($link, "SELECT * FROM images WHERE url = '$img_url' LIMIT 1");
+	$res = mysqli_query($link, "SELECT * FROM images WHERE url='$img_url'");
 	var_dump($res);
 	if($res == false){
 		echo "Doesn't exist<br>";
 		mysqli_query($link, "INSERT INTO images (url, tags probs) VALUES ('" . $tags_and_probs[0] . "', " . $tags_and_probs[1] . ")");
+		echo "Should have inserted<br>";
 	}else{
 		echo "exists<br>";
 		mysqli_query($link, "UPDATE images SET tags='" . $tags_and_probs[0] . "', probs='" . $tags_and_probs[1] . "' WHERE url='$img_url'");
+		echo "Should have updated<br>";
 	}
 }
 
