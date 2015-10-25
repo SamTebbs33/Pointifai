@@ -120,8 +120,8 @@ a.button.button-cta {
   color: #ffffff;
   clear: both;
   vertical-align: bottom;
-  margin-bottom: 10%;
   text-align: center;
+  margin-top: -25px;
 }
 
 .credits-text{
