@@ -32,7 +32,7 @@ function get_tags_and_probs($img_url){
 		$max_tags = 10;
 		if($count > $max_tags){
 			for($x = 0; $x < $count-$max_tags; $x++){
-				$idx = $count-$x;
+				$idx = $count-$x-1;
 				unset($tags[$idx]);
 				$min_val = $probs[$idx];
 				unset($probs[$idx]);
