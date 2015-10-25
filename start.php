@@ -85,7 +85,7 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 						$tags = get_tags($link, $game_state - 1);
 
 						foreach ($tags as $key => $value) {
-							echo "<li>" . $key . ": " . $value . "</li>";
+							echo "<li>" . $value . "</li>";
 						}
 					?>
 				</ul>
