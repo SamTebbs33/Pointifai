@@ -62,7 +62,6 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 				<header class="logo">Pointif<span class="text-blue">ai</span></header>
 				<table class="leaderboard">
 					<?php require_once 'score.php'; ?>
-					<?php var_dump(get_leaderboard($link)); ?>
 					<?php foreach (get_leaderboard($link) as $key => $value) {
 						?>
 						<tr>
