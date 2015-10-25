@@ -84,6 +84,7 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 			audio.play();
 		</script>
 		<?php 
+			require_once 'score.php';
 			$leaderboard = get_leaderboard($link);
 			$winner_points = $leaderboard[0];
 			$winner_name = array_search($winner_points, $leaderboard);
