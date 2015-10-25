@@ -180,7 +180,7 @@ li {
 }
 
 .desktop table.leaderboard tr:nth-child(even) td {
-  background-color: #def4ff;
+  background-color: rgba(222, 244, 255, 0.4);
 }
 
 img.question-image {
