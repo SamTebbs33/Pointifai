@@ -2,6 +2,14 @@
 
 $game_state = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE field = 'state'"))[2];
 
+if (isset($_GET['state'])) {
+	if ($game_state == 9 && $_GET['state'] == 'reset') {
+		$blah = mysqli_query($link, "DELETE FROM participants");
+		$blahblah = mysqli_query($link, "UPDATE settings SET val='0' WHERE field = 'state'");
+		echo("<script>window.location = '/';</script>");
+	}
+}
+
 // Initial registration page
 if (isset($_GET['state'])) {
 	if ($game_state + 1 == $_GET['state']) {
@@ -86,7 +94,7 @@ else if ($game_state > 8) {
 	<div class="welcome">
 		<h1 class="logo animated infinite pulse winner_name">Samuel Tebbs</h1>
 		<h2 class="winner_points">100 pts</h2>
-		<a href="index.php" class="button button-white-stroke button-cta">Back to menu</a>
+		<a href="/start.php?state=reset" class="button button-white-stroke button-cta">Back to menu</a>
 	</div>
 </body>
 	<?php
