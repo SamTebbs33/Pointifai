@@ -80,7 +80,9 @@ function add_img_to_db($img_url){
 	global $link;
 	$tags_and_probs = get_tags_and_probs_strs($img_url);
 	$res = mysqli_query($link, "SELECT * FROM images WHERE url='$img_url'");
+	echo "as strs:";
 	var_dump($tags_and_probs);
+	echo "<br>";
 	if($res != false){
 		$query = "INSERT INTO images (url, tags, probs) VALUES ('$img_url', '" . $tags_and_probs[0] . "', " . $tags_and_probs[1] . ")";
 		$z = mysqli_query($link, $query);
