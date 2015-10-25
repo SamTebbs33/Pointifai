@@ -115,8 +115,8 @@ a.button.button-cta {
 
 footer{
   clear: both;
-  margin-top: -180px; /* negative value of footer height */
-  height: 180px;
+  margin-top: -80px; /* negative value of footer height */
+  height: 80px;
   width:100%;
   position: relative;
   background-color: rgba(0, 0, 0, 125);
