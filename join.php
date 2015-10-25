@@ -20,33 +20,6 @@ if (mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE field = '
 		<a href="" class="button button-blue button-cta" style = "width: 100%">Submit</a>
 	</div>
 	<div class="mobile mobile-countdown">
-		<script>
-		var canvas = document.getElementById('scoreCanvas');
-
-		var guesses = 50;
-		var guessCounter = guesses;
-		var screenHeight = canvas.height;
-
-		if(canvas.getContext){
-			var ctx = canvas.getContext('2d');
-			ctx.fillStyle = "#6382d9;";
-			for(var x = 0; x < 100; x++){
-				guessCounter -= guesses/100;
-				ctx.fillRect(0,canvas.height - guessCounter * (screenHeight/100), canvas.width, guessCounter * (screenHeight/100));
-				sleep(50);
-			}
-		}
-
-		function sleep(milliseconds) {
-		  var start = new Date().getTime();
-		  for (var i = 0; i < 1e7; i++) {
-		    if ((new Date().getTime() - start) > milliseconds){
-		      break;
-		    }
-		  }
-		}
-
-		</script>
 		<canvas id="scoreCanvas" width="100%" height="100%"></canvas>
 		<p class="score">100</p>
 	</div>

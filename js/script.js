@@ -6,6 +6,8 @@ $(document).ready(function () {
 
 	// check to see if the page is a controller
 	if ($('body').hasClass('mobile-controller')) {
+			var canvas = document.getElementById('scoreCanvas');
+
 	    var pusher = new Pusher('c834feb77fbe7f552f26', {
 	      encrypted: true
 	    });
@@ -24,6 +26,31 @@ $(document).ready(function () {
 	     	$('.mobile').hide();
 			$('.mobile-message .message').html('Waiting for the next question...');
 	     	$('.mobile-message').show();
+	    });
+
+			channel.bind('score', function(data) {
+				var guesses = 50;
+				var guessCounter = guesses;
+				var screenHeight = canvas.height;
+
+				if(canvas.getContext){
+				  var ctx = canvas.getContext('2d');
+				  ctx.fillStyle = "#6382d9;";
+				  for(var x = 0; x < 100; x++){
+				    guessCounter -= guesses/100;
+				    ctx.fillRect(0,canvas.height - guessCounter * (screenHeight/100), canvas.width, guessCounter * (screenHeight/100));
+				    sleep(50);
+				  }
+				}
+
+				function sleep(milliseconds) {
+				  var start = new Date().getTime();
+				  for (var i = 0; i < 1e7; i++) {
+				    if ((new Date().getTime() - start) > milliseconds){
+				      break;
+				    }
+				  }
+				}
 	    });
 
 	    $('.mobile-enter-tag a.button').click(function (e) {
