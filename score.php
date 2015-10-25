@@ -8,6 +8,7 @@ function get_leaderboard(){
 	while($row = $result->fetch_assoc()){
 		$leaderboard[$row[1]] = $row[2];	
 	}
+	var_dump($leaderboard);
 	return arsort($leaderboard);
 }
 
