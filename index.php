@@ -1,5 +1,5 @@
 <?php include('templates/header.php'); ?>
-<body class = "front-page-background" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;">
+<body style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;">
 	<div class="welcome">
 		<h1 class="logo">Pointif<span class="text-blue">ai</span></h1>
 		<h2>A pointless game for pointless people</h2>

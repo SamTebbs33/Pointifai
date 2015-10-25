@@ -115,14 +115,11 @@ a.button.button-cta {
 
 footer{
   clear: both;
-  height: 10%;
+  margin-top: -180px; /* negative value of footer height */
+  height: 180px;
   width:100%;
   position: relative;
   background-color: rgba(0, 0, 0, 125);
-}
-
-.front-page-background{
-  height: 90%;
 }
 
 .footer-text{
