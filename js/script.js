@@ -57,6 +57,7 @@ $(document).ready(function () {
 					console.log('the doge has registered with the meme, very swag');
 					// store the name
 					name = $('.mobile-name > input').val();
+					$('.user-name').text(name);
 
 					$('.mobile-name').hide();
 					$('.mobile-message .message').html('Waiting for the game to start...');
