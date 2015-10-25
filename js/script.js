@@ -32,7 +32,7 @@ $(document).ready(function () {
 	    	$('.mobile').hide();
 			$('.mobile-message .message').html('Waiting for the next question...');
 	     	$('.mobile-message').show();
-	    	$.post('/register.php', {
+	    	$.post('/something.php', {
 				'name': name,
 				'q_id': question_number,
 				'tag': $('.mobile-enter-tag input[type=text]').val()
@@ -57,6 +57,7 @@ $(document).ready(function () {
 					console.log('the doge has registered with the meme, very swag');
 					// store the name
 					name = $('.mobile-name > input').val();
+					$('.user-name').text(name);
 
 					$('.mobile-name').hide();
 					$('.mobile-message .message').html('Waiting for the game to start...');
