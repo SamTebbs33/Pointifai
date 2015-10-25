@@ -5,8 +5,8 @@ require_once "config.php";
 $pusher = new Pusher($key_pusher_id, $key_pusher_secret, $key_pusher_app_id);
 
 // Client
-function push_new_q($pusher){
-	$pusher->trigger("client-channel", "new-q", "");
+function push_new_q($pusher, $q_id){
+	$pusher->trigger("client-channel", "new-q", $q_id);
 }
 
 function push_score_update($pusher){

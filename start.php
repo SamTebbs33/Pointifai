@@ -34,7 +34,7 @@ if ($game_state == "0") { ?>
 
 // Question pages
 else if (($game_state > 0 && ($game_state % 2 != 0) && $game_state < 9)) {
-	push_new_q($pusher);
+	push_new_q($pusher, ($game_state + 1) / 2);
 	// $new_val = $game_state + 1;
 	// $state = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE field = 'round'"));
 	// $state = substr($round[2], 0, 1);

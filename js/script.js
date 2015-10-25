@@ -2,6 +2,7 @@ $(document).ready(function () {
 	var name = '';
 	console.log('yolo swag');
 	var has_registered = false;
+	var question_number = 0;
 
 	// check to see if the page is a controller
 	if ($('body').hasClass('mobile-controller')) {
@@ -12,6 +13,7 @@ $(document).ready(function () {
 	    console.log('the doge has connected to the meme');
 	    channel.bind('new-q', function(data) {
 	    	console.log('#rekt');
+	    	question_number = data;
 	     	$('.mobile').hide();
 	     	$('.mobile-enter-tag').show();
 	    });
@@ -25,9 +27,10 @@ $(document).ready(function () {
 
 	    $('.mobile-enter-tag a.button').click(function (e) {
 	    	e.preventDefault();
+	    	var blah = ($('body').data('state') + 1) / 2;
 	    	$.post('/register.php', {
 				'name': name,
-				'q_id': ($('body').data('state') + 1) / 2;
+				'q_id': question_number;
 				'tag': $('.mobile-enter-tag input[type=text]').val();
 			}, function () {
 				// output doge bants
