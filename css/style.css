@@ -116,7 +116,7 @@ a.button.button-cta {
 footer{
   height: 2rem;
   width:100%;
-  vertical-align: bottom;
+  position: relative;
   background-color: rgba(0, 0, 0, 125);
 }
 
