@@ -13,7 +13,7 @@ body {
   background-color: #ffffff;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  
+  padding: 1em;
 }
 
 h1 {
@@ -121,7 +121,7 @@ a.button.button-cta {
   clear: both;
   vertical-align: bottom;
   text-align: center;
-  margin-top: -50px;
+  margin-top: -75px;
 }
 
 .credits-text{
