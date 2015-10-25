@@ -10,7 +10,7 @@ if (isset($_GET['state'])) {
 	}
 }
 
-if ($game_state == "0")) { ?>
+if ($game_state == "0") { ?>
 <body class="host" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
 	<div class="desktop centre">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
