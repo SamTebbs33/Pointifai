@@ -63,26 +63,14 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 				<table class="leaderboard">
 					<?php require_once 'score.php'; ?>
 					<?php var_dump(get_leaderboard($link)); ?>
-					<tr>
-						<td>100</td>
-						<td>clarifai-bob</td>
-						<td>...</td>
-					</tr>
-					<tr>
-						<td>75</td>
-						<td>clarifai-dave</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>50</td>
-						<td>clarifai-sarah</td>
-						<td>...</td>
-					</tr>
-					<tr>
-						<td>25</td>
-						<td>clarifai-user</td>
-						<td>...</td>
-					</tr>
+					<?php foreach (get_leaderboard($link) as $key => $value) {
+						?>
+						<tr>
+							<td><?php echo $value; ?></td>
+							<td><?php echo $key; ?></td>
+						</tr>
+						<?php
+					} ?>
 				</table>
 				<a href="/start.php?state=<?php echo $game_state + 1; ?>" class="button button-cta button-blue">Next question</a>
 			</div>
