@@ -83,7 +83,7 @@ function add_img_to_db($img_url){
 	echo "as strs:";
 	var_dump($tags_and_probs);
 	echo "<br>";
-	if($res == false){
+	if($res != false){
 		$query = "INSERT INTO images (url, tags, probs) VALUES ('$img_url', '" . $tags_and_probs[0] . "', " . $tags_and_probs[1] . ")";
 		$z = mysqli_query($link, $query);
 	}else{
