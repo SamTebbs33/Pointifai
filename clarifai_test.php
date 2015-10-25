@@ -1,15 +1,15 @@
 <?php
 
-$secret = parse_ini_file("secret.txt");
+require_once "config.php";
 
 $curl = curl_init();
-$img_url = "http://pointifai.com/img/stars.jpeg";
+$img_url = "http://zoarchurch.co.uk/content/pages/uploaded_images/91.png";
 echo "<img src=\"$img_url\" width=\"100%\">";
 curl_setopt_array($curl, array(
 	CURLOPT_URL => "https://api.clarifai.com/v1/tag/",
 	CURLOPT_RETURNTRANSFER => TRUE,
 	CURLOPT_POSTFIELDS => "url=" . $img_url,
-	CURLOPT_HTTPHEADER => array ("Authorization: Bearer " . $secret["clarifai_access_token"])
+	CURLOPT_HTTPHEADER => array ("Authorization: Bearer " . $key_clarifai_token)
 	)
 );
 $response = curl_exec($curl);
