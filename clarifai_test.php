@@ -45,6 +45,10 @@ function get_tags_and_probs($img_url){
 			$probs[$key] -= $x;
 		}
 	}
+	echo "Count: " . count($tags) . "<br>";
+	foreach($tags as $key => $val){
+		echo $key . " = " . $probs[$key] . "<br>";
+	}
 	return array($tags, $probs);
 }
 
