@@ -43,6 +43,7 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 		// $state = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE field = 'round'"));
 		// $state = substr($round[2], 0, 1);
 		$img = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM images WHERE id = $round"));
+		var_dump($img);
 		$url = $img["url"];
 	?>
 	<body class="host<?php if(strlen($game_state) == 1) { echo " timer"; } ?>" data-state="<?php echo $game_state; ?>" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
