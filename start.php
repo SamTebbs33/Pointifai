@@ -80,7 +80,7 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 						<?php
 					} ?>
 				</table>
-				<ul class="player-list">
+				<ul class="tag-list">
 					<?php
 						$tags = get_tags($link, $game_state - 1);
 
