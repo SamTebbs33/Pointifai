@@ -13,6 +13,8 @@ $tags = explode(",", $tags_and_probs["tags"]);
 $probs = explode(",", $tags_and_probs["probs"]);
 var_dump($tags);
 var_dump($probs);
+echo "Q ID: $g_id<br>";
+echo "State: $game_state<br>";
 if($q_id == ($game_state + 1) / 2){
 	echo "q id ok<br>";
 	foreach($tags as $key => $val){
