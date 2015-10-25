@@ -68,6 +68,9 @@ function get_tags_and_probs_strs($img_url){
 
 function add_img_to_db($img_url){
 	$tags_and_probs = get_tags_and_probs_strs($img_url);
+	echo "Tags and probs: ";
+	var_dump($tags_and_probs);
+	echo "<br>";
 	$res = mysqli_query($link, "SELECT * FROM images WHERE url = '$img_url' LIMIT 1");
 	if(mysqli_fetch_array($res) == false){
 		mysqli_query($link, "INSERT INTO 'images'('url', 'tags' 'probs') VALUES ('" . $tags_and_probs[0] . "', " . $tags_and_probs[1] . ")");
