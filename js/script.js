@@ -14,6 +14,7 @@ $(document).ready(function () {
 	    channel.bind('new-q', function(data) {
 	    	console.log('#rekt');
 	    	question_number = data;
+	    	$('.mobile-enter-tag input[type=text]').val('');
 	     	$('.mobile').hide();
 	     	$('.mobile-enter-tag').show();
 	    });
