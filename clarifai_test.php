@@ -76,3 +76,5 @@ function add_img_to_db($img_url){
 	}
 }
 
+add_img_to_db("http://www.freestockphotos.name/wallpaper-original/wallpapers/download-images-of-gentle-dogs-6866.jpg");
+add_img_to_db("http://i.dailymail.co.uk/i/pix/2013/11/03/article-2486855-192ACC5200000578-958_964x682.jpg");
