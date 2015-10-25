@@ -11,8 +11,8 @@ $game_state = $game_state["val"];
 $tags_and_probs = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM images WHERE id = " . mysqli_real_escape_string($link, $q_id)));
 $tags = explode(",", $tags_and_probs["tags"]);
 $probs = explode(",", $tags_and_probs["probs"]);
-echo "Q ID: $g_id<br>";
-echo "State: $game_state<br>";
+echo "Q ID: " . $g_id . "<br>";
+echo "State: " . $game_state . "<br>";
 if(intval($q_id) == (intval($game_state) + 1) / 2){
 	echo "q id ok<br>";
 	foreach($tags as $key => $val){
