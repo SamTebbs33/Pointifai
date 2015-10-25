@@ -23,7 +23,7 @@ $(document).ready(function () {
 	     	$('.mobile-message').show();
 	    });
 
-	    $('.mobile-enter-tag input[type=submit]').click(function (e) {
+	    $('.mobile-enter-tag a.button').click(function (e) {
 	    	e.preventDefault();
 	    	$.post('/register.php', {
 				'name': name,
