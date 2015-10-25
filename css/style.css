@@ -51,18 +51,6 @@ body.centre {
   padding-top: 5em;
 }
 
-.button:hover .hover-hide {
-  display: none;
-}
-
-.button .hover-show {
-  display: none;
-}
-
-.button:hover .hover-show {
-  display: inline;
-}
-
 div.welcome {
   text-align: center;
   width: 100%;
