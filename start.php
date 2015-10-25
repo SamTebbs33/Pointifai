@@ -69,7 +69,7 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 		<body class="host<?php if(strlen($game_state) == 1) { echo " timer"; } ?>" data-state="<?php echo $game_state; ?>" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;">
 			<div class="desktop centre">
 				<header class="logo">Pointif<span class="text-blue">ai</span></header>
-				<table class="leaderboard">
+				<table class="leaderboard centre">
 					<?php require_once 'score.php'; ?>
 					<?php foreach (get_leaderboard($link) as $key => $value) {
 						?>

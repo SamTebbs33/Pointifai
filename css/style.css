@@ -177,9 +177,13 @@ li {
   width: 20rem;
 }
 
-.desktop table.leaderboard tr td {
-  width: 50%;
-  text-align: right;
+.desktop table .leaderboard tr td:nth-child(1){
+  width: 20%;
+  text-align: center;
+}
+.desktop table.leaderboard tr td:nth-child(2){
+  width: 80%;
+  text-align: center;
 }
 
 .desktop table.leaderboard tr td:nth-child(2) {
