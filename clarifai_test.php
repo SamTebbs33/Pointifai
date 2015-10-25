@@ -5,7 +5,6 @@ require_once "config.php";
 function get_tags_and_probs($img_url){
 	global $key_clarifai_token;	
 	$curl = curl_init();
-	echo "token: " . $key_clarifai_token . "<br>";
 	curl_setopt_array($curl, array(
 		CURLOPT_URL => "https://api.clarifai.com/v1/tag/",
 		CURLOPT_RETURNTRANSFER => TRUE,
@@ -21,7 +20,6 @@ function get_tags_and_probs($img_url){
 		$img_results = $json["results"]["0"]["result"]["tag"];
 		$tags = $img_results["classes"];
 		$probs = $img_results["probs"];
-		print_tags($tags, $probs);
 		// Remove the "nobody" tag, as it's irrelevant
 		$nobody = array_search("nobody", $tags);
 		if($nobody !== FALSE){
@@ -47,7 +45,6 @@ function get_tags_and_probs($img_url){
 			$probs[$key] -= $x;
 		}
 	}
-	print_tags($tags, $probs);
 	return array($tags, $probs);
 }
 
@@ -60,9 +57,6 @@ function print_tags($tags, $probs){
 
 function get_tags_and_probs_strs($img_url){
 	$tags_and_probs = get_tags_and_probs($img_url);
-	echo "Tags and probs arrays:";
-	var_dump($tags_and_probs);	
-	echo "<br>";
 	$tags_str = "";
 	$probs_str = "";
 	$x = 0;
@@ -81,13 +75,13 @@ function get_tags_and_probs_strs($img_url){
 
 function add_img_to_db($img_url){
 	$tags_and_probs = get_tags_and_probs_strs($img_url);
-	echo "Tags and probs: ";
-	var_dump($tags_and_probs);
-	echo "<br>";
 	$res = mysqli_query($link, "SELECT * FROM images WHERE url = '$img_url' LIMIT 1");
+	var_dump($res);
 	if(mysqli_fetch_array($res) == false){
+		echo "Doesn't exist<br>";
 		mysqli_query($link, "INSERT INTO 'images'('url', 'tags' 'probs') VALUES ('" . $tags_and_probs[0] . "', " . $tags_and_probs[1] . ")");
 	}else{
+		echo "exists<br>";
 		mysqli_query($link, "UPDATE images SET tags='" . $tags_and_probs[0] . "', probs='" . $tags_and_probs[1] . "' WHERE url='$img_url'");
 	}
 }
