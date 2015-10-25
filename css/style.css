@@ -117,6 +117,7 @@ footer{
   height: 2rem;
   width:100%;
   vertical-align: bottom;
+  background-color: rgba(0, 0, 0, 125);
 }
 
 .footer-text{
