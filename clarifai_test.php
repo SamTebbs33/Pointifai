@@ -65,12 +65,12 @@ function get_tags_and_probs_strs($img_url){
 	$x = 0;
 	$count = count($tags_and_probs[0]);
 	foreach($tags_and_probs[0] as $key => $tag){
-		$tags_str += $tag + (($x < $count - 1) ? "," : "");
+		$tags_str = $tags_str . $tag . (($x < $count - 1) ? "," : "");
 		$x++;
 	}
 	$x = 0;
 	foreach($tags_and_probs[1] as $key => $prob){
-		$probs_str += $prob + (($x < $count - 1) ? "," : "");
+		$probs_str = $probs_str . $prob . (($x < $count - 1) ? "," : "");
 		$x++;
 	}
 	return array($tags_str, $probs_str);
