@@ -46,28 +46,34 @@ else if (($game_state > 0 && ($game_state % 2 != 0) && $game_state < 9)) {
 else if ($game_state > 0 && ($game_state % 2 == 0) && $game_state < 9) {
 	push_end_q($pusher);
 	?>
-		<table class="leaderboard">
-			<tr>
-				<td>100</td>
-				<td>clarifai-bob</td>
-				<td>...</td>
-			</tr>
-			<tr>
-				<td>75</td>
-				<td>clarifai-dave</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>50</td>
-				<td>clarifai-sarah</td>
-				<td>...</td>
-			</tr>
-			<tr>
-				<td>25</td>
-				<td>clarifai-user</td>
-				<td>...</td>
-			</tr>
-		</table>
+	<body class="host<?php if(strlen($game_state) == 1) { echo " timer"; } ?>" data-state="<?php echo $game_state; ?>" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
+		<div class="desktop centre">
+			<header class="logo">Pointif<span class="text-blue">ai</span></header>
+			<table class="leaderboard">
+				<tr>
+					<td>100</td>
+					<td>clarifai-bob</td>
+					<td>...</td>
+				</tr>
+				<tr>
+					<td>75</td>
+					<td>clarifai-dave</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>50</td>
+					<td>clarifai-sarah</td>
+					<td>...</td>
+				</tr>
+				<tr>
+					<td>25</td>
+					<td>clarifai-user</td>
+					<td>...</td>
+				</tr>
+			</table>
+			<a href="/start.php?state=<?php echo $game_state + 1; ?>" class="button button-cta button-blue">Next question</a>
+		</div>
+	</body>
 	<?php
 }
 else if ($game_state > 8) {
