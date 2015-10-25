@@ -8,6 +8,6 @@
 	</div>
 </body>
 <footer>
-	<a class="footer-text">a project created in 24 hrs for Brumhack 2015.</a>
+	<a class="footer-text">a project created in 24 hrs for Brumhack 2015 by #teamswagteam.</a>
 </footer>
 <?php include('templates/footer.php'); ?>
