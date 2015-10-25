@@ -20,6 +20,7 @@ function get_tags_and_probs($img_url){
 		$img_results = $json["results"]["0"]["result"]["tag"];
 		$tags = $img_results["classes"];
 		$probs = $img_results["probs"];
+		print_tags($tags, $probs);
 		// Remove the "nobody" tag, as it's irrelevant
 		$nobody = array_search("nobody", $tags);
 		if($nobody !== FALSE){
@@ -45,11 +46,15 @@ function get_tags_and_probs($img_url){
 			$probs[$key] -= $x;
 		}
 	}
+	print_tags($tags, $probs);
+	return array($tags, $probs);
+}
+
+function print_tags($tags, $probs){
 	echo "Count: " . count($tags) . "<br>";
 	foreach($tags as $key => $val){
 		echo $key . " = " . $probs[$key] . "<br>";
 	}
-	return array($tags, $probs);
 }
 
 function get_tags_and_probs_strs($img_url){
