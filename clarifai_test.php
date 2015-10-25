@@ -63,7 +63,7 @@ function get_tags_and_probs_strs($img_url){
 	$tags_str = "";
 	$probs_str = "";
 	$x = 0;
-	$count = count($tags_and_probs);
+	$count = count($tags_and_probs[0]);
 	foreach($tags_and_probs[0] as $key => $tag){
 		$tags_str += $tag + (($x < $count - 1) ? "," : "");
 		$x++;
