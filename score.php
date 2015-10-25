@@ -8,7 +8,7 @@ function get_leaderboard($link){
 	while($row = $result->fetch_assoc()){
 		$leaderboard[$row[1]] = $row[2];	
 	}
-	arsort($leaderboard)
+	arsort($leaderboard);
 	return $leaderboard;
 }
 
