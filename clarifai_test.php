@@ -57,9 +57,6 @@ function print_tags($tags, $probs){
 
 function get_tags_and_probs_strs($img_url){
 	$tags_and_probs = get_tags_and_probs($img_url);
-	echo "raw:";
-	var_dump($tags_and_probs);
-	echo "<br>";
 	$tags_str = "";
 	$probs_str = "";
 	$x = 0;
@@ -80,14 +77,15 @@ function add_img_to_db($img_url){
 	global $link;
 	$tags_and_probs = get_tags_and_probs_strs($img_url);
 	$res = mysqli_query($link, "SELECT * FROM images WHERE url='$img_url'");
-	echo "as strs:";
-	var_dump($tags_and_probs);
-	echo "<br>";
 	if($res != false){
+		echo "1<br>";
 		$query = "INSERT INTO images (url, tags, probs) VALUES ('$img_url', '" . $tags_and_probs[0] . "', " . $tags_and_probs[1] . ")";
 		$z = mysqli_query($link, $query);
+		echo "after 1<br>";
 	}else{
+		echo "2<br>";
 		mysqli_query($link, "UPDATE images SET tags='" . $tags_and_probs[0] . "', probs='" . $tags_and_probs[1] . "' WHERE url='$img_url'");
+		echo "after 2<br>";
 	}
 }
 
