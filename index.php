@@ -7,7 +7,7 @@
 		<a href="/join.php" class="button button-blue button-cta">Join a game</a>
 	</div>
 </body>
-<footer>
+<footer class = "centre">
 	<a class="footer-text">a project created in 24 hrs for Brumhack 2015.</a>
 </footer>
 <?php include('templates/footer.php'); ?>
