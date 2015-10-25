@@ -12,4 +12,9 @@ function get_leaderboard($link){
 	return $leaderboard;
 }
 
+function get_tags($link, $state){
+	$result = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM images WHERE id=" . ($state + 1) / 2));
+	return explode(",", $result[2]);
+}
+
 ?>
