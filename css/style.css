@@ -175,6 +175,7 @@ li {
 
 .desktop table.leaderboard {
   width: 20rem;
+  margin:auto;
 }
 
 .desktop table .leaderboard tr td:nth-child(1){
