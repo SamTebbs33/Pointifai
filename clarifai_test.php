@@ -74,6 +74,7 @@ function get_tags_and_probs_strs($img_url){
 }
 
 function add_img_to_db($img_url){
+	global $link;
 	$tags_and_probs = get_tags_and_probs_strs($img_url);
 	$res = mysqli_query($link, "SELECT * FROM images WHERE url='$img_url'");
 	var_dump($res);
