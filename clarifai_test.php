@@ -3,7 +3,7 @@
 require_once "config.php";
 
 function get_tags_and_probs($img_url){
-	
+	global $key_clarifai_token;	
 	$curl = curl_init();
 	echo "token: " . $key_clarifai_token . "<br>";
 	curl_setopt_array($curl, array(
