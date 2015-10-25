@@ -1,5 +1,8 @@
 <?php 
 require_once 'config.php';
+
+$player_list = mysqli_query($link, "SELECT * FROM participants");
+
 if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_pass) {
 	include('templates/header.php'); 
 
@@ -28,6 +31,11 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 			<h2>Waiting for players<span class="infinite flash">...</span></h2>
 			<h3>Current players:</h3>
 			<ul class="player-list">
+				<?php
+					while($row = $player_list->fetch_assoc()){
+						echo "<li>" . $row["name"] . "</li>";
+					}
+				?>
 			</ul>
 			<a href="?state=1" class="button button-blue button-cta">Start Game</a>
 		</div>

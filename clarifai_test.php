@@ -79,7 +79,8 @@ function add_img_to_db($img_url){
 	$res = mysqli_query($link, "SELECT * FROM images WHERE url='$img_url'");
 	if($res != false){
 		echo "1<br>";
-		$query = "INSERT INTO images (url, tags, probs) VALUES ('$img_url', '" . $tags_and_probs[0] . "', " . $tags_and_probs[1] . ")";
+		$query = "INSERT INTO images (url, tags, probs) VALUES ('$img_url', '" . $tags_and_probs[0] . "', '" . $tags_and_probs[1] . "')";
+		echo "Query: $query<br>";
 		$z = mysqli_query($link, $query);
 		echo "after 1<br>";
 	}else{
