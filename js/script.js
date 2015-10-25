@@ -23,6 +23,18 @@ $(document).ready(function () {
 	     	$('.mobile-message').show();
 	    });
 
+	    $('.mobile-enter-tag input[type=submit]').click(function (e) {
+	    	e.preventDefault();
+	    	$.post('/register.php', {
+				'name': name,
+				'q_id': ($('body').data('state') + 1) / 2;
+				'tag': $('.mobile-enter-tag input[type=text]').val();
+			}, function () {
+				// output doge bants
+				console.log('the doge has sent epic banter to the meme');
+			});
+	    });
+
 		// show the form to enter the name
 		$('.mobile-name').show();
 		// setup the go button
