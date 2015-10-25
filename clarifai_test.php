@@ -79,7 +79,7 @@ function add_img_to_db($img_url){
 	var_dump($res);
 	if(mysqli_fetch_array($res) == false){
 		echo "Doesn't exist<br>";
-		mysqli_query($link, "INSERT INTO 'images'('url', 'tags' 'probs') VALUES ('" . $tags_and_probs[0] . "', " . $tags_and_probs[1] . ")");
+		mysqli_query($link, "INSERT INTO images(url, tags probs) VALUES ('" . $tags_and_probs[0] . "', " . $tags_and_probs[1] . ")");
 	}else{
 		echo "exists<br>";
 		mysqli_query($link, "UPDATE images SET tags='" . $tags_and_probs[0] . "', probs='" . $tags_and_probs[1] . "' WHERE url='$img_url'");
