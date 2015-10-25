@@ -79,7 +79,7 @@ function add_img_to_db($img_url){
 	var_dump($res);
 	if($res == false){
 		echo "Doesn't exist<br>";
-		mysqli_query($link, "INSERT INTO images (url, tags probs) VALUES ('" . $tags_and_probs[0] . "', " . $tags_and_probs[1] . ")");
+		$z = mysqli_query($link, "INSERT INTO images (url, tags probs) VALUES ('" . $tags_and_probs[0] . "', " . $tags_and_probs[1] . ")");
 		echo "Should have inserted<br>";
 	}else{
 		echo "exists<br>";
