@@ -83,9 +83,14 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 			var audio = new Audio('audio/end_theme.wav');
 			audio.play();
 		</script>
+		<?php 
+			$leaderboard = get_leaderboard($link);
+			$winner_points = $leaderboard[0];
+			$winner_name = array_search($winner_points, $leaderboard);
+		?>
 		<div class="welcome">
-			<h1 class="logo animated infinite pulse winner_name">Samuel Tebbs</h1>
-			<h2 class="winner_points">100 pts</h2>
+			<h1 class="logo animated infinite pulse winner_name"><?php echo $winner_name; ?></h1>
+			<h2 class="winner_points"><?php echo $winner_points; ?> pts</h2>
 			<a href="/start.php?state=reset" class="button button-white-stroke button-cta">Back to menu</a>
 		</div>
 	</body>
