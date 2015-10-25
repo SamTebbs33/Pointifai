@@ -115,7 +115,8 @@ a.button.button-cta {
 
 .credits{
   width: 100%;
-  padding: 10px;
+  padding: 20px;
+  margin: none;
   background-color: rgba(0, 0, 0, 125);
   color: #ffffff;
   clear: both;
