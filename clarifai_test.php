@@ -50,6 +50,9 @@ function get_tags_and_probs($img_url){
 
 function get_tags_and_probs_strs($img_url){
 	$tags_and_probs = get_tags_and_probs($img_url);
+	echo "Tags and probs arrays:";
+	var_dump($tags_and_probs);	
+	echo "<br>";
 	$tags_str = "";
 	$probs_str = "";
 	$x = 0;
