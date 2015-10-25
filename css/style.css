@@ -33,6 +33,10 @@ h1, h2, h3 {
   font-weight: bold;
 }
 
+canvas{
+  
+}
+
 div.centre {
   text-align: center;
   width: 100%;

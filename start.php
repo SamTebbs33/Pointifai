@@ -1,10 +1,10 @@
-<?php 
+<?php
 require_once 'config.php';
 
 $player_list = mysqli_query($link, "SELECT * FROM participants");
 
 if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_pass) {
-	include('templates/header.php'); 
+	include('templates/header.php');
 
 	$game_state = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE field = 'state'"))[2];
 
@@ -25,7 +25,7 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 	}
 
 	if ($game_state == "0") { ?>
-	<body class="host" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
+	<body class="host" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;">
 		<div class="desktop centre">
 			<header class="logo">Pointif<span class="text-blue">ai</span></header>
 			<h2>Waiting for players<span class="infinite flash">...</span></h2>
@@ -40,7 +40,7 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 			<a href="?state=1" class="button button-blue button-cta">Start Game</a>
 		</div>
 	</body>
-	<?php 
+	<?php
 	}
 
 	// Question pages
@@ -53,7 +53,7 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 		$img = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM images WHERE id = $round"));
 		$url = $img[1];
 	?>
-	<body class="host<?php if(strlen($game_state) == 1) { echo " timer"; } ?>" data-state="<?php echo $game_state; ?>" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
+	<body class="host<?php if(strlen($game_state) == 1) { echo " timer"; } ?>" data-state="<?php echo $game_state; ?>" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;">
 		<div class="desktop centre">
 			<header class="logo">Pointif<span class="text-blue">ai</span></header>
 			<div class="timer"><span class="seconds"></span>s remaining...</div>
@@ -61,12 +61,12 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 		</div>
 	</body>
 	<?php
-	} 
+	}
 	// Leaderboard
 	else if ($game_state > 0 && ($game_state % 2 == 0) && $game_state < 9) {
 		push_end_q($pusher);
 		?>
-		<body class="host<?php if(strlen($game_state) == 1) { echo " timer"; } ?>" data-state="<?php echo $game_state; ?>" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;"> 
+		<body class="host<?php if(strlen($game_state) == 1) { echo " timer"; } ?>" data-state="<?php echo $game_state; ?>" style="background-image: url('/img/stars.jpeg'); background-size:cover; background-position: center; color: white;">
 			<div class="desktop centre">
 				<header class="logo">Pointif<span class="text-blue">ai</span></header>
 				<table class="leaderboard">
@@ -92,7 +92,7 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 			var audio = new Audio('audio/end_theme.wav');
 			audio.play();
 		</script>
-		<?php 
+		<?php
 			require_once 'score.php';
 			$leaderboard = get_leaderboard($link);
 			$winner_points = reset($leaderboard);
@@ -106,7 +106,7 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 	</body>
 		<?php
 	}
-	include('templates/footer.php'); 
+	include('templates/footer.php');
 } else {
 	header('WWW-Authenticate: Basic realm="yolobanter"');
     header('Status: 401 Unauthorized');
