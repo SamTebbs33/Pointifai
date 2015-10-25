@@ -187,10 +187,6 @@ li {
   text-align: center;
 }
 
-.desktop table.leaderboard tr td:nth-child(2) {
-  text-align: left;
-}
-
 .desktop table.leaderboard tr:nth-child(even) td {
   background-color: rgba(222, 244, 255, 0.4);
 }
