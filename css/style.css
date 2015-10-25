@@ -170,7 +170,8 @@ li {
 }
 
 .desktop table.leaderboard {
-  width: 100%;
+  width: 50%;
+  float: left;
 }
 
 .desktop table.leaderboard tr td {
