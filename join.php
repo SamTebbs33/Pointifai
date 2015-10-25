@@ -18,7 +18,7 @@ if (mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE field = '
 		<p class="score">0</p>
 		<p class="rank">1st</p>
 		<p><input type="text" placeholder="Enter tag..." style="width: 100%;"></p>
-		<a href="" class="button button-blue button-cta" style="clear: both">Submit</a>
+		<a href="" class="button button-blue button-cta" style = "width: 100%">Submit</a>
 	</div>
 	<div class="mobile mobile-countdown">
 		<header class="logo">Pointif<span class="text-blue">ai</span></header>
