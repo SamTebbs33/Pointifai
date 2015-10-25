@@ -20,6 +20,7 @@ if(intval($q_id) == (intval($game_state) + 1) / 2){
 			$name = mysqli_real_escape_string($link, $name);
 			$pts = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM participants WHERE name = $name"));
 			$pts += 100 - intval($probs[$key]);
+			echo "New pts: " . $pts . "<br>";
 			mysql_query($link, "UPDATE participants SET points = '" . intval($pts) . "' WHERE name = $name");
 			break;
 		}
