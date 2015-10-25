@@ -174,7 +174,7 @@ li {
 }
 
 .desktop table.leaderboard {
-  width: 15rem;
+  width: 20rem;
 }
 
 .desktop table.leaderboard tr td {
@@ -183,7 +183,6 @@ li {
 }
 
 .desktop table.leaderboard tr td:nth-child(2) {
-  width: 20%;
   text-align: left;
 }
 
