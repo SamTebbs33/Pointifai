@@ -30,8 +30,8 @@ $(document).ready(function () {
 	    	var blah = ($('body').data('state') + 1) / 2;
 	    	$.post('/register.php', {
 				'name': name,
-				'q_id': question_number;
-				'tag': $('.mobile-enter-tag input[type=text]').val();
+				'q_id': question_number,
+				'tag': $('.mobile-enter-tag input[type=text]').val()
 			}, function () {
 				// output doge bants
 				console.log('the doge has sent epic banter to the meme');
