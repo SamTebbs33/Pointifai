@@ -15,7 +15,7 @@ var_dump($tags);
 var_dump($probs);
 echo "Q ID: $g_id<br>";
 echo "State: $game_state<br>";
-if($q_id == ($game_state + 1) / 2){
+if(intval($q_id) == (intval($game_state) + 1) / 2){
 	echo "q id ok<br>";
 	foreach($tags as $key => $val){
 		if($tags[$key] == $tag){
