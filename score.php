@@ -1,6 +1,6 @@
 <?php
 
-require "config.php";
+require_once "config.php";
 
 function get_leaderboard(){
 	$result = mysqli_query($link, "SELECT * FROM participants");
