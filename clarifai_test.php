@@ -3,7 +3,7 @@
 $secret = parse_ini_file("secret.txt");
 
 $curl = curl_init();
-$img_url = "http://zoarchurch.co.uk/content/pages/uploaded_images/91.png";
+$img_url = "http://pointifai.com/img/stars.jpeg";
 echo "<img src=\"$img_url\" width=\"100%\">";
 curl_setopt_array($curl, array(
 	CURLOPT_URL => "https://api.clarifai.com/v1/tag/",
