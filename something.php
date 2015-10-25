@@ -1,7 +1,7 @@
 <?php
 
 include "config.php";
-
+var_dump($_POST);
 $name = $_POST["name"];
 $q_id = $_POST["q_id"];
 $tag = $_POST["tag"];
