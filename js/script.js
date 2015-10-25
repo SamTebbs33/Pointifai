@@ -101,6 +101,7 @@ $(document).ready(function () {
 	    var channel = pusher.subscribe('host-channel');
 	    console.log('the doge has connected to the meme');
 	    channel.bind('new-registration', function(data) {
+	    	console.log('new swag has joined the meme');
 	    	$('ul.player-list').append('<li>' + data + '</li>');
 	    });
 	    if ($('body').hasClass('timer')) {
