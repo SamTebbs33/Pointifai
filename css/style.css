@@ -114,14 +114,14 @@ a.button.button-cta {
 }
 
 footer{
-  height: 5%;
+  height: 10%;
   width:100%;
   position: relative;
   background-color: rgba(0, 0, 0, 125);
 }
 
 .front-page-background{
-  height: 95%;
+  height: 90%;
 }
 
 .footer-text{
