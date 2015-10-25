@@ -28,6 +28,9 @@ $(document).ready(function () {
 	    $('.mobile-enter-tag a.button').click(function (e) {
 	    	e.preventDefault();
 	    	var blah = ($('body').data('state') + 1) / 2;
+	    	$('.mobile').hide();
+			$('.mobile-message .message').html('Waiting for the next question...');
+	     	$('.mobile-message').show();
 	    	$.post('/register.php', {
 				'name': name,
 				'q_id': question_number,
