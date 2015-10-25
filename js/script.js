@@ -32,7 +32,7 @@ $(document).ready(function () {
 	    	$('.mobile').hide();
 			$('.mobile-message .message').html('Waiting for the next question...');
 	     	$('.mobile-message').show();
-	    	$.post('/register.php', {
+	    	$.post('/something.php', {
 				'name': name,
 				'q_id': question_number,
 				'tag': $('.mobile-enter-tag input[type=text]').val()
