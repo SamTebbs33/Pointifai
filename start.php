@@ -80,6 +80,15 @@ if (@$_SERVER['PHP_AUTH_USER'] == $key_user && @$_SERVER['PHP_AUTH_PW'] == $key_
 						<?php
 					} ?>
 				</table>
+				<ul class="player-list">
+					<?php
+						$tags = get_tags($link, $game_state - 1);
+
+						foreach ($tags as $key => $value) {
+							echo "<li>" . $value . "</li>";
+						}
+					?>
+				</ul>
 				<a href="/start.php?state=<?php echo $game_state + 1; ?>" class="button button-cta button-blue"><?php if ($game_state < 8) { ?>Next question<?php } else { ?>Continue<?php } ?></a>
 			</div>
 		</body>

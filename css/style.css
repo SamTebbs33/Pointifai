@@ -130,6 +130,11 @@ ul.player-list{
   width: 75%;
 }
 
+ul.tag-list{
+  width: 50%;
+  float: right;
+}
+
 li {
   background-color: white;
   display: inline-block;
