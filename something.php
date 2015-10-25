@@ -6,8 +6,8 @@ $name = $_POST["name"];
 $q_id = $_POST["q_id"];
 $tag = $_POST["tag"];
 
-$game_state = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE field = 'state'"))[2];
-$tags_and_probs = explode(",", mysqli_fetch_row(mysqli_query($link, "SELECT * FROM images WHERE id = " . mysqli_real_escape_string($link, $q_id))));
+$game_state = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM settings WHERE field = 'state'"))["val"];
+$tags_and_probs = mysqli_fetch_row(mysqli_query($link, "SELECT * FROM images WHERE id = " . mysqli_real_escape_string($link, $q_id)));
 var_dump($tags_and_probs);
 $tags = explode(",", $tags_and_probs["tags"]);
 $probs = explode(",", $tags_and_probs["probs"]);
